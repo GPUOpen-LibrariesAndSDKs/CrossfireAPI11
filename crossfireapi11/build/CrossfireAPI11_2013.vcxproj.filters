@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ags_lib">
+      <UniqueIdentifier>{96EE2A27-02CE-A9C2-0BE6-349977441024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ags_lib\inc">
+      <UniqueIdentifier>{9FDCA789-0B92-207F-9486-1A56003B1783}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gpuopen_fx">
+      <UniqueIdentifier>{40BB9933-2C73-DB80-957A-B4DC81517671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gpuopen_fx\ShadowFX">
+      <UniqueIdentifier>{D3AECE35-3F10-AC43-C87D-F2F534DEE202}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gpuopen_fx\ShadowFX\inc">
+      <UniqueIdentifier>{5C737BC8-C8AA-C35F-D1B4-27833D6BEA58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ResourceFiles">
+      <UniqueIdentifier>{571E9D71-C334-9B07-0CAC-262978016C8F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Shaders">
+      <UniqueIdentifier>{06ADC7FB-7262-40F1-FB56-3AC8670B37F5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\CrossfireAPI11_UI.inl">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\src\ResourceFiles\dpiaware.manifest">
+      <Filter>src\ResourceFiles</Filter>
+    </None>
+    <None Include="..\src\Shaders\CrossfireAPI11.hlsl">
+      <Filter>src\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\ags_lib\inc\amd_ags.h">
+      <Filter>ags_lib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\gpuopen_fx\ShadowFX\inc\AMD_ShadowFX.h">
+      <Filter>gpuopen_fx\ShadowFX\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ResourceFiles\resource.h">
+      <Filter>src\ResourceFiles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CrossfireAPI11.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\ResourceFiles\CrossfireAPI11.rc">
+      <Filter>src\ResourceFiles</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
