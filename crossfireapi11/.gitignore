@@ -8,6 +8,7 @@
 [Dd]esktop_*/
 CrossfireAPI11_Debug_*.*
 CrossfireAPI11_Release_*.*
+bin/*.*
 
 # Visual Studo 2015 cache/options directory
 .vs/
