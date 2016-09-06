@@ -12,18 +12,24 @@ if "%arg1:~0,3%" == "..\" set arg1=%arg1:~3%
 set startdir=%cd%
 cd %~dp0
 
-echo --- amd_lib ---
-cd ..\amd_lib\premake
-call :createvsfiles %arg2%
-call :createvsfileswithminimaldependencies %arg2%
+if exist ..\amd_lib\premake (
+    echo --- amd_lib ---
+    cd ..\amd_lib\premake
+    call :createvsfiles %arg2%
+    call :createvsfileswithminimaldependencies %arg2%
+    cd %~dp0
+)
 
-echo --- amd_sdk ---
-cd ..\..\amd_sdk\premake
-call :createvsfiles %arg2%
-call :createvsfileswithminimaldependencies %arg2%
+if exist ..\amd_sdk\premake (
+    echo --- amd_sdk ---
+    cd ..\amd_sdk\premake
+    call :createvsfiles %arg2%
+    call :createvsfileswithminimaldependencies %arg2%
+    cd %~dp0
+)
 
 echo --- dxut core ---
-cd ..\..\dxut\Core
+cd ..\dxut\Core
 call :createvsfiles %arg2%
 
 echo --- dxut optional ---
@@ -58,8 +64,8 @@ goto :EOF
 
 :: delete unnecessary sln files
 :cleanslnfiles
-del /f /q amd_lib\build\AMD_LIB_*.sln
-del /f /q amd_sdk\build\AMD_SDK_*.sln
+if exist amd_lib\build\nul del /f /q amd_lib\build\AMD_LIB_*.sln
+if exist amd_sdk\build\nul del /f /q amd_sdk\build\AMD_SDK_*.sln
 del /f /q dxut\Core\DXUT_*.sln
 del /f /q dxut\Optional\DXUTOpt_*.sln
 goto :EOF
